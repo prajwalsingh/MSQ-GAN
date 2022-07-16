@@ -19,3 +19,4 @@
 # Notes
 
 * **Work in progress**.
+* Not a clean code.
