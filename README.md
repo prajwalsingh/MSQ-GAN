@@ -15,3 +15,7 @@
 |---|
 |![natural images](https://github.com/prajwalsingh/MSQ-GAN/blob/main/images/natural_images.png)|
 |![panda](https://github.com/prajwalsingh/MSQ-GAN/blob/main/images/panda_images.png)|
+
+# Notes
+
+* **Work in progress**.
