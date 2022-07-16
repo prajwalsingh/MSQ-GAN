@@ -1,0 +1,11 @@
+In this experiment we are removing SpectralNormalization from the generator network.
+Generator have PixelNorm.
+
+Panda of size 256.
+
+lr = 3e-4
+
+
+Multistage discriminator with 256, 128, and 64
+
+Chnages number of filters in generator.
