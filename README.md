@@ -11,3 +11,7 @@ Mode Seeking Quick GAN is a generative network which is combination of different
 
 # Results
 
+|![art](https://github.com/prajwalsingh/MSQ-GAN/blob/main/images/art_paiting.png)|
+|---|
+|![natural images](https://github.com/prajwalsingh/MSQ-GAN/blob/main/images/natural_images.png)|
+|![panda](https://github.com/prajwalsingh/MSQ-GAN/blob/main/images/panda_images.png)|
