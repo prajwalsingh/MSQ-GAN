@@ -293,7 +293,7 @@ def dist_train_step(mirrored_strategy, model, model_gopt, model_copt, X, latent_
 			# total_loss   = g_loss
 
 		variables = model.gen.trainable_variables #+ model.gcn.trainable_variables
-		gradients = gtape.gradient(g_loss, variables)
+		gradients = gtape.gradient(total_loss, variables)
 		model_gopt.apply_gradients(zip(gradients, variables))
 		return g_loss
 
