@@ -10,6 +10,7 @@ from glob import glob
 from natsort import natsorted
 import wandb
 import numpy as np
+# from tensorflow import keras
 
 tf.random.set_seed(45)
 np.random.seed(45)
@@ -62,7 +63,8 @@ if __name__ == '__main__':
 	#	clstoidx[clsname] = idx
 	#	idxtocls[idx] = clsname
 
-	data_path   = '../data/100-shot-panda/*'
+	# data_path   = '../data/100-shot-panda/*' 
+	data_path   = 'cropped_jpg/*'
 	# train_batch = load_complete_data(data_path, data_path, input_res=256, batch_size=batch_size, shuffle_buffer_size=100)
 	train_batch = load_batch(data_path, res=256, batch_size=batch_size)
 	lr = 3e-4
@@ -102,11 +104,11 @@ if __name__ == '__main__':
 	if ckpt_manager.latest_checkpoint:
 		print('Restored from last checkpoint epoch: {0}'.format(START))
 
-	for epoch in range(START, EPOCHS):
+	for epoch in tqdm(range(START, EPOCHS)):
 		t_gloss = tf.keras.metrics.Mean()
 		t_closs = tf.keras.metrics.Mean()
 
-		for idx, (X, C) in enumerate(tqdm(train_batch), start=1):
+		for idx, (X, C) in enumerate((train_batch), start=1):
 		# for idx, path in enumerate(tqdm(train_batch), start=1):
 			# X, C = load_data(path, dt=clstoidx, res=128)
 			# print(X.shape)
